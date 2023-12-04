@@ -29,7 +29,6 @@ import org.springframework.web.bind.annotation.*;
 public class AccountController {
     @Value("${jwt.http.request.header}")
     private String tokenHeader;
-
     @Autowired
     private AuthenticationManager authenticationManager;
     @Autowired
@@ -133,7 +132,6 @@ public class AccountController {
 //    public ResponseEntity<?> deleteAccount(HttpServletResponse response) throws Exception {
 //        try {
 //            accountService.deleteAccount();
-//            tokenCookieManager.deleteTokenFromCookie(response);
 //            return new ResponseEntity<>(HttpStatus.OK);
 //        } catch (Exception e) {
 //            return new ResponseEntity<>(errorResponseManager.makeErrorResponse(e), HttpStatus.BAD_REQUEST);
