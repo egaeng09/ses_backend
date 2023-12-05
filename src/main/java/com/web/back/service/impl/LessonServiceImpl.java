@@ -87,12 +87,11 @@ public class LessonServiceImpl implements LessonService {
     // 강의실 등록
     @Override
     public LessonDto addLesson(LessonDto lessonDto) throws Exception {
+        Member member = accountService.getAuthenticatedMember();
+
         Lesson lesson = new Lesson();
         lesson.setName(lessonDto.getName());
-        // 일단 lessonDto에 담아두는 거로 했는데 강사를 어떻게 할지 생각 좀 해봐야 할듯
-        lesson.setMember(memberRepository.findById(lessonDto.getOwner_id()).orElseThrow(() -> {
-            return new IllegalArgumentException("해당 회원을 찾을 수 없습니다.");
-        }));
+        lesson.setMember(member);
         lesson.setSemester(lessonDto.getSemester());
         lesson.setYear(lessonDto.getYear());
 
