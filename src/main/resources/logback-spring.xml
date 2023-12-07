@@ -3,9 +3,9 @@
 <configuration scan="true" scanPeriod="60 seconds">
     <property name="LOG_LEVEL" value="info"/>
     <!-- log file path -->
-    <property name="LOG_PATH" value="${member.home}/logs"/>
+    <property name="LOG_PATH" value="logs"/>
     <!-- log file name -->
-    <property name="LOG_FILE_NAME" value="code_expert_log"/>
+    <property name="LOG_FILE_NAME" value="ses_log"/>
     <!-- err log file name -->
     <property name="ERR_LOG_FILE_NAME" value="err_log"/>
     <!-- pattern -->

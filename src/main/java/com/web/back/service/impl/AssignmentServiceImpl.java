@@ -102,7 +102,7 @@ public class AssignmentServiceImpl implements AssignmentService {
         assignment.setTitle(assignmentDto.getTitle());
         assignment.setDescripsion(assignmentDto.getDescripsion());
         assignment.setStart_time(LocalDateTime.now());
-//        assignment.setStart_time(assignmentDto.getStart_time());
+        // assignment.setStart_time(assignmentDto.getStart_time());
         assignment.setEnd_time(assignmentDto.getEnd_time());
         assignment.setLanguage(assignmentDto.getLanguage());
 
@@ -270,7 +270,7 @@ public class AssignmentServiceImpl implements AssignmentService {
 
         submit.setMember(member);
         submit.setLanguage(newSubmit.getLanguage());
-        submit.setResult(newSubmit.getResult());
+        submit.setResult("제출되었습니다.");
         submit.setScore(newSubmit.getScore());
         submit.setAssignment(assignment);
 
