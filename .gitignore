@@ -3,6 +3,12 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+**/src/main/resources
+pom.xml
+mvnw
+mvnw.cmd
+.mvn
+logs
 
 .apt_generated
 .classpath
